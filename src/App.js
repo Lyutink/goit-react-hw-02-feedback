@@ -7,9 +7,9 @@ import NotificationFeedback from "./Components/NotificationFeedback/Notification
 
 class App extends Component {
   state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
+    Good: 0,
+    Neutral: 0,
+    Bad: 0,
   };
 
   handleChange = (event) => {
@@ -24,12 +24,13 @@ class App extends Component {
   }
 
   countPositiveFeedback() {
-    const goodFeedback = this.state.good;
+    const goodFeedback = this.state.Good;
     const total = this.countTotalFeedback();
     return Math.round((goodFeedback / total) * 100);
   }
 
   render() {
+    //const { good, neutral, bad } = this.state;
     return (
       <>
         <Section title={"Please leave feedback"}>

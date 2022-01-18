@@ -1,14 +1,16 @@
+import { format } from "prettier";
 import PropTypes from "prop-types";
+import { Container, Button } from "./FeedbackOptions.styled";
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <Container>
       {Object.keys(options).map((option) => (
-        <button type="button" key={option} onClick={onLeaveFeedback}>
+        <Button type="button" key={option} onClick={onLeaveFeedback}>
           {option}
-        </button>
+        </Button>
       ))}
-    </div>
+    </Container>
   );
 }
 

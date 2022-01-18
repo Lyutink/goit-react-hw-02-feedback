@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import Stats from "./Statistics.styled";
 
 export default function Statistics({ options, totalFeedbak, positivFeedback }) {
   return (
-    <div>
-      <ul>
+    <>
+      <Stats>
         {Object.entries(options).map((option) => (
           <li key={option[0]}>
             {option[0]}: {option[1]}
@@ -11,8 +12,8 @@ export default function Statistics({ options, totalFeedbak, positivFeedback }) {
         ))}
         <li>Total: {totalFeedbak}</li>
         <li>Positive feedback: {positivFeedback} %</li>
-      </ul>
-    </div>
+      </Stats>
+    </>
   );
 }
 
